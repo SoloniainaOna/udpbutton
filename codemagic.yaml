@@ -5,7 +5,7 @@ workflows:
     environment:
       flutter: stable
       vars:
-        ZIP_URL: "https://1fichier.com/?mmkytxngptwhrk2u6s5r"
+        ZIP_URL: "https://drive.google.com/file/d/1erpgY6bh7MVj7fCGnHB8YrzanVDZQsP9/view?usp=sharing"
     scripts:
       - name: Download and unzip project
         script: |

@@ -9,6 +9,7 @@ workflows:
     scripts:
       - name: Download and unzip project
         script: |
+          set -ex
           curl -L -o project.zip "$ZIP_URL"
           mkdir extracted_zip
           unzip -q project.zip -d extracted_zip

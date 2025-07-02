@@ -12,7 +12,7 @@ workflows:
           set -ex
           curl -L -o project.zip "$ZIP_URL"
           mkdir extracted_zip
-          unzip -q project.zip -d extracted_zip
+          unzip -q projet.zip -d extracted_zip
           cp -r extracted_zip/* $CM_BUILD_DIR/
           echo "Contenu de $CM_BUILD_DIR :"
           ls -la $CM_BUILD_DIR

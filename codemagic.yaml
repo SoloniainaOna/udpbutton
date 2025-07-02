@@ -3,6 +3,7 @@ workflows:
     name: Custom Flutter iOS build
     max_build_duration: 60
     environment:
+      flutter: stable
       vars:
         ZIP_URL: "https://1fichier.com/?mmkytxngptwhrk2u6s5r"
     scripts:
@@ -12,7 +13,10 @@ workflows:
           mkdir extracted_zip
           unzip -q project.zip -d extracted_zip
           cp -r extracted_zip/* $CM_BUILD_DIR/
+          echo "Contenu de $CM_BUILD_DIR :"
           ls -la $CM_BUILD_DIR
+          echo "Contenu de $CM_BUILD_DIR/pubspec.yaml :"
+          cat $CM_BUILD_DIR/pubspec.yaml
       - name: Install dependencies
         script: flutter pub get
       - name: Build iOS app (no codesign)
